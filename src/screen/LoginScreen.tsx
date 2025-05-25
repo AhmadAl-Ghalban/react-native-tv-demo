@@ -27,11 +27,8 @@ const LoginScreen = () => {
   });
 
   const handleLogin = () => {
-    if (username && password) {
-      navigation.navigate('Video'); // Navigate to video screen after login
-    } else {
-      Alert.alert('Please enter valid credentials');
-    }
+    navigation.navigate('Video'); // Navigate to video screen after login
+
   };
 
   return (
@@ -56,7 +53,7 @@ const LoginScreen = () => {
         secureTextEntry
         onChangeText={setPassword}
         showSoftInputOnFocus={true} // Ensures keyboard appears on focus
-
+        autoFocus
       />
 
       {/* Login Button */}
